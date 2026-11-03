@@ -173,7 +173,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             </h2>
 
             <p className="font-body text-xs text-[#4A4A4E] leading-relaxed mb-5">
-              Veteran parliamentarian from Bihar with over five decades in public life — seven terms as MLA, Speaker of the Bihar Vidhan Sabha, and now constitutional head of Nagaland.
+              A seven-term Member of the Bihar Legislative Assembly, former Minister across Road Construction, Tourism and Health portfolios, Leader of Opposition, 17th Speaker of the Bihar Vidhan Sabha — and now the 23rd Governor of Nagaland.
             </p>
 
             {/* Quote Card */}
@@ -328,7 +328,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </h2>
 
               <p className="font-body text-xs xl:text-sm text-[#4A4A4E] leading-relaxed max-w-[320px]">
-                Veteran parliamentarian from Bihar with over five decades in public life — seven terms as MLA, Speaker of the Bihar Vidhan Sabha, and now constitutional head of Nagaland.
+                A seven-term Member of the Bihar Legislative Assembly, former Minister across Road Construction, Tourism and Health portfolios, Leader of Opposition, 17th Speaker of the Bihar Vidhan Sabha — and now the 23rd Governor of Nagaland.
               </p>
             </div>
 

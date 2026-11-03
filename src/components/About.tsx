@@ -35,10 +35,10 @@ export const About: React.FC = () => {
             <Reveal delay={0.15}>
               <div className="font-body text-xs sm:text-sm lg:text-[15px] text-white/80 leading-[1.75] max-w-[540px] space-y-4">
                 <p>
-                  Born on 26 August 1953 in Patna to Shri Panna Lal Yadav and Smt. Raj Kumari Yadav, Nand Kishore Yadav’s earliest lessons were in service. He completed his matriculation in 1969 from the State Marwari High School and went on to earn his Bachelor of Science from Magadh University.
+                  Born on 26 August 1953 in Patna to Shri Panna Lal Yadav and Smt. Rajkumari Devi, Nand Kishore Yadav’s earliest lessons were in service. He joined the Rashtriya Swayamsevak Sangh in 1969 and became active in the Akhil Bharatiya Vidyarthi Parishad in 1971 — early years that would shape five decades of public life.
                 </p>
                 <p>
-                  The same year he finished school, he joined the Rashtriya Swayamsevak Sangh — the beginning of a lifelong engagement with ideas of nation, discipline, and community. Student activism through the Akhil Bharatiya Vidyarthi Parishad followed in 1971, laying the groundwork for a public career defined by proximity to people and problems.
+                  While pursuing his Bachelor of Science at Magadh University, he answered Loknayak Jayaprakash Narayan’s call and boycotted his final examination in 1974 to join the JP Movement in full. He was elected President of the Patna City Chhatra Sangharsh Samiti, and spent approximately fifteen months in prison between 1974 and 1976 — a chapter that still defines his public identity.
                 </p>
               </div>
             </Reveal>
@@ -51,7 +51,7 @@ export const About: React.FC = () => {
                     ANCESTRAL LINEAGE
                   </div>
                   <div className="font-display text-sm font-semibold text-white">
-                    Shri Panna Lal Yadav & Smt. Raj Kumari Yadav
+                    Shri Panna Lal Yadav & Smt. Rajkumari Devi
                   </div>
                   <div className="font-body text-[11px] text-white/50 mt-1">
                     Patna, Bihar · Roots in grassroots service

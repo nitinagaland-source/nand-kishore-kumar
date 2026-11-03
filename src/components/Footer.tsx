@@ -236,7 +236,7 @@ export const Footer: React.FC = () => {
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-white/50 font-micro text-[10px] tracking-[0.14em]">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span>OFFICIAL CONSTITUTIONAL PORTFOLIO · CONTENT SOURCED FROM PUBLIC RECORDS</span>
+              <span>OFFICIAL CONSTITUTIONAL PORTFOLIO · CONTENT SOURCED FROM PUBLIC RECORDS · LAST UPDATED NOVEMBER 2026</span>
             </div>
             <div>
               SOURCES: NAGALAND.GOV.IN · LOKBHAVAN.NAGALAND.GOV.IN · NEWS AGENCIES

@@ -37,7 +37,7 @@ export const GlassPrism: React.FC = () => {
             <div>
               <div className="font-micro text-xs text-white/70 mb-1">FOUNDATION</div>
               <div className="font-micro text-[13px] sm:text-sm font-semibold tracking-[0.14em] text-white leading-tight">
-                B.SC. · MAGADH UNIVERSITY
+                MAGADH UNIVERSITY · B.SC. 1974
               </div>
             </div>
             <div className="text-[10px] font-micro text-white/60 border-t border-white/20 pt-2">
@@ -81,17 +81,17 @@ export const GlassPrism: React.FC = () => {
             }}
           >
             <div className="flex justify-between items-start">
-              <span className="font-micro text-[11px] text-white/80 tracking-[0.14em]">03 · STUDENT ACTIVISM</span>
+              <span className="font-micro text-[11px] text-white/80 tracking-[0.14em]">03 · JP MOVEMENT</span>
               <div className="w-2.5 h-2.5 rounded-full bg-white/60" />
             </div>
             <div>
-              <div className="font-micro text-xs text-white/70 mb-1">LEADERSHIP</div>
+              <div className="font-micro text-xs text-white/70 mb-1">CONVICTION</div>
               <div className="font-micro text-[13px] sm:text-sm font-semibold tracking-[0.14em] text-white leading-tight">
-                ABVP · 1971
+                JP MOVEMENT · 1974
               </div>
             </div>
             <div className="text-[10px] font-micro text-white/60 border-t border-white/20 pt-2">
-              PUBLIC SERVICE AWAKENING
+              PATNA CITY CHHATRA SANGHARSH
             </div>
           </div>
 

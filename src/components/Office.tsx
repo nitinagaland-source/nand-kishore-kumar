@@ -9,6 +9,11 @@ interface ExOfficioRole {
   location: string;
 }
 
+interface GovernanceRole {
+  entity: string;
+  role: string;
+}
+
 const exOfficioRoles: ExOfficioRole[] = [
   {
     institution: 'NAGALAND UNIVERSITY',
@@ -37,9 +42,43 @@ const exOfficioRoles: ExOfficioRole[] = [
   },
 ];
 
+const committeeRoles: GovernanceRole[] = [
+  {
+    entity: 'PUBLIC ACCOUNTS COMMITTEE',
+    role: 'Chairman · 2015',
+  },
+  {
+    entity: 'ESTIMATES COMMITTEE',
+    role: 'Chairman · 2020',
+  },
+  {
+    entity: 'INTERNAL RESOURCES & CENTRAL ASSISTANCE COMMITTEE',
+    role: 'Chairman · 2022',
+  },
+  {
+    entity: 'BIHAR LEGISLATIVE ASSEMBLY',
+    role: '17th Speaker · 2024',
+  },
+];
+
+const ministerialRoles: GovernanceRole[] = [
+  {
+    entity: 'ROAD CONSTRUCTION DEPARTMENT',
+    role: 'Minister · 2005, 2010, 2017–2020',
+  },
+  {
+    entity: 'TOURISM DEPARTMENT',
+    role: 'Minister · 2005',
+  },
+  {
+    entity: 'HEALTH DEPARTMENT',
+    role: 'Minister · 2008',
+  },
+];
+
 export const Office: React.FC = () => {
   return (
-    <section id="office" className="relative w-full bg-white px-3 sm:px-4 lg:px-6 py-4 sm:py-6">
+    <section id="office" className="relative w-full bg-white px-3 sm:px-4 lg:px-6 py-4 sm:py-6 select-none">
       {/* Deep Regal Sovereign Emerald Forest Block Card */}
       <div className="max-w-[1440px] mx-auto rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-[#06241B] via-[#093829] to-[#041A13] text-white p-6 sm:p-10 lg:p-16 border border-emerald-500/25 shadow-2xl overflow-hidden relative">
         {/* Soft emerald / mint ambient auras */}
@@ -112,16 +151,16 @@ export const Office: React.FC = () => {
                 </p>
               </Reveal>
 
-              {/* Ex-Officio Appointments List */}
+              {/* Sub-block 1: Existing Ex-Officio Appointments List */}
               <div className="flex flex-col w-full max-w-lg">
-                <div className="font-micro text-[10px] text-[#27E8C0] tracking-[0.14em] mb-2 font-bold">
+                <div className="font-micro text-[10px] text-[#27E8C0] tracking-[0.14em] mb-2 font-bold uppercase">
                   EX-OFFICIO CONSTITUTIONAL & ACADEMIC APPOINTMENTS
                 </div>
 
                 {exOfficioRoles.map((role, idx) => (
                   <div key={idx} className="relative py-3 group">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-3">
-                      <span className="font-display text-xs sm:text-[13px] font-bold text-white tracking-tight group-hover:text-[#27E8C0] transition-colors">
+                      <span className="font-micro text-xs sm:text-[13px] font-bold text-white tracking-tight group-hover:text-[#27E8C0] transition-colors">
                         {role.institution}
                       </span>
                       <span className="font-display text-xs sm:text-sm font-semibold text-[#27E8C0] shrink-0">
@@ -141,15 +180,83 @@ export const Office: React.FC = () => {
                         delay: 0.08 + idx * 0.06,
                         ease: [0.16, 1, 0.3, 1],
                       }}
-                      className="absolute bottom-0 left-0 w-full h-[1px] bg-emerald-500/30 origin-left"
+                      className="absolute bottom-0 left-0 w-full h-[1px] origin-left"
+                      style={{ backgroundColor: 'rgba(207, 232, 207, 0.2)' }}
                     />
                   </div>
                 ))}
               </div>
+
+              {/* Sub-block 2: Legislative Committee Leadership (64px vertical gap) */}
+              <div className="flex flex-col w-full max-w-lg mt-16">
+                <div className="font-micro text-[10px] text-[#27E8C0] tracking-[0.14em] mb-2 font-bold uppercase">
+                  LEGISLATIVE COMMITTEE LEADERSHIP · BIHAR VIDHAN SABHA
+                </div>
+
+                {committeeRoles.map((role, idx) => (
+                  <div key={idx} className="relative py-3.5 group">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3">
+                      <span className="font-micro text-xs sm:text-[12px] font-bold text-white tracking-tight group-hover:text-[#27E8C0] transition-colors">
+                        {role.entity}
+                      </span>
+                      <span className="font-display text-xs sm:text-sm font-semibold text-[#27E8C0] shrink-0">
+                        {role.role}
+                      </span>
+                    </div>
+
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.08 + idx * 0.06,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="absolute bottom-0 left-0 w-full h-[1px] origin-left"
+                      style={{ backgroundColor: 'rgba(207, 232, 207, 0.2)' }}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Sub-block 3: Ministerial Portfolios (64px vertical gap) */}
+              <div className="flex flex-col w-full max-w-lg mt-16">
+                <div className="font-micro text-[10px] text-[#27E8C0] tracking-[0.14em] mb-2 font-bold uppercase">
+                  MINISTERIAL PORTFOLIOS · GOVERNMENT OF BIHAR
+                </div>
+
+                {ministerialRoles.map((role, idx) => (
+                  <div key={idx} className="relative py-3.5 group">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3">
+                      <span className="font-micro text-xs sm:text-[12px] font-bold text-white tracking-tight group-hover:text-[#27E8C0] transition-colors">
+                        {role.entity}
+                      </span>
+                      <span className="font-display text-xs sm:text-sm font-semibold text-[#27E8C0] shrink-0">
+                        {role.role}
+                      </span>
+                    </div>
+
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.08 + idx * 0.06,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="absolute bottom-0 left-0 w-full h-[1px] origin-left"
+                      style={{ backgroundColor: 'rgba(207, 232, 207, 0.2)' }}
+                    />
+                  </div>
+                ))}
+              </div>
+
             </div>
 
-            {/* Right Column: 3D Stewardship Card */}
-            <div className="w-full lg:w-[42%] flex flex-col justify-center">
+            {/* Right Column: 3D Stewardship Card (Sticky on desktop) */}
+            <div className="w-full lg:w-[42%] flex flex-col justify-start lg:sticky lg:top-28">
               <Reveal delay={0.25}>
                 <div
                   className="rounded-[24px] p-6 sm:p-8 border border-emerald-400/30 text-white relative overflow-hidden shadow-[0_20px_50px_rgba(4,26,19,0.6)] bg-white/[0.05] backdrop-blur-xl"

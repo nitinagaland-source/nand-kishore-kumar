@@ -4,6 +4,7 @@ import Reveal from './ui/Reveal';
 interface GalleryItem {
   id: number;
   imageSrc: string;
+  fallbackSrc: string;
   tag: string;
   location: string;
   date: string;
@@ -14,48 +15,53 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    imageSrc: 'https://i.ibb.co/RTVqvjTM/images-43.jpg',
-    tag: 'CEREMONIAL',
-    location: 'KOHIMA',
-    date: '13 MARCH 2026',
-    event: 'SWEARING-IN AT RAJ BHAVAN',
-    context: 'Assumed constitutional office as the 23rd Governor of Nagaland, administered by the Chief Justice.',
+    imageSrc: '/assets/gallery/card-1.jpg',
+    fallbackSrc: 'https://i.ibb.co/jkhScCnk/images-46.jpg',
+    tag: 'LEADERSHIP',
+    location: 'NEW DELHI',
+    date: 'MARCH 2026',
+    event: 'MEETING WITH HON’BLE PRIME MINISTER',
+    context: 'Discussions with Prime Minister Shri Narendra Modi on development initiatives, connectivity, and peace accords in Nagaland.',
   },
   {
     id: 2,
-    imageSrc: 'https://i.ibb.co/0pgtV07M/images-42.jpg',
+    imageSrc: '/assets/gallery/card-2.jpg',
+    fallbackSrc: 'https://i.ibb.co/0pgtV07M/images-42.jpg',
     tag: 'GOVERNANCE',
     location: 'LOK BHAVAN',
     date: 'APRIL 2026',
-    event: 'ENPO ACCORD DELIBERATIONS',
+    event: 'CEREMONIAL SALUTE & ENPO DELIBERATIONS',
     context: 'Reviewing implementation frameworks for the Frontier Nagaland Territorial Authority with state leadership.',
   },
   {
     id: 3,
-    imageSrc: 'https://i.ibb.co/q35MkdQ9/images-41.jpg',
-    tag: 'INFRASTRUCTURE',
-    location: 'FOOTHILL CORRIDOR',
-    date: 'MAY 2026',
-    event: 'STRATEGIC HIGHWAY & RAIL SURVEY',
-    context: 'Technical review of the Foothill connectivity corridor linking remote districts to commercial arteries.',
+    imageSrc: '/assets/gallery/card-3.jpg',
+    fallbackSrc: 'https://i.ibb.co/ksTFLyNR/images-45.jpg',
+    tag: 'CEREMONIAL',
+    location: 'KOHIMA',
+    date: '13 MARCH 2026',
+    event: 'SWEARING-IN AT RAJ BHAVAN',
+    context: 'Assumed constitutional office as the 23rd Governor of Nagaland, administered by the Chief Justice under the National Emblem.',
   },
   {
     id: 4,
-    imageSrc: 'https://i.ibb.co/WWVVVHKn/images-40.jpg',
-    tag: 'ACADEMICS',
-    location: 'NAGALAND UNIVERSITY',
-    date: 'JUNE 2026',
-    event: 'CHIEF RECTOR ADDRESS AT LUMAMI',
-    context: 'Convening academic council and encouraging tribal research chairs and premier technical curricula.',
+    imageSrc: '/assets/gallery/card-4.jpg',
+    fallbackSrc: 'https://i.ibb.co/WWVVVHKn/images-40.jpg',
+    tag: 'CULTURAL HERITAGE',
+    location: 'KOHIMA',
+    date: 'MAY 2026',
+    event: 'HONOURING NAGA TRADITIONS & LEADERSHIP',
+    context: 'Felicitation in traditional Naga ceremonial attire during state leadership consultation at Lok Bhavan.',
   },
   {
     id: 5,
-    imageSrc: 'https://i.ibb.co/B2Hkn0kt/images-39.jpg',
-    tag: 'COMMUNITY',
-    location: 'MON & MOKOKCHUNG',
-    date: 'JULY 2026',
-    event: 'TRIBAL ELDERS & GAON BURAS SAMVAD',
-    context: 'Direct grassroots listening session with village councils on rural healthcare and youth livelihoods.',
+    imageSrc: '/assets/gallery/card-5.jpg',
+    fallbackSrc: 'https://i.ibb.co/B2Hkn0kt/images-39.jpg',
+    tag: 'CONSTITUTIONAL',
+    location: 'LOK BHAVAN KOHIMA',
+    date: 'APRIL 2026',
+    event: 'TRIBUTE TO DR. B.R. AMBEDKAR',
+    context: 'Paying floral homage to Babasaheb Dr. B.R. Ambedkar on Ambedkar Jayanti, reaffirming constitutional values.',
   },
 ];
 
@@ -161,6 +167,12 @@ export const Gallery: React.FC = () => {
                   src={item.imageSrc}
                   alt={`${item.event} - ${item.location}`}
                   loading="lazy"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (item.fallbackSrc && target.src !== item.fallbackSrc) {
+                      target.src = item.fallbackSrc;
+                    }
+                  }}
                   className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 

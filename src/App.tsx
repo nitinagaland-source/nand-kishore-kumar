@@ -11,6 +11,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import About from './components/About';
+import Family from './components/Family';
+import JPMovement from './components/JPMovement';
 import Journey from './components/Journey';
 import Vision from './components/Vision';
 import Gallery from './components/Gallery';
@@ -81,19 +83,25 @@ export default function App() {
         {/* Section 3: About / Early Life (Roots & 3D Glass Prism) */}
         <About />
 
-        {/* Section 4: Journey / Timeline (Five Decades & Mesh Blob) */}
+        {/* Section 4: Family (NEW - 5-Row Metadata Grid) */}
+        <Family />
+
+        {/* Section 5: JP Movement (NEW - 15 Months Conviction & Ribbons) */}
+        <JPMovement />
+
+        {/* Section 6: Journey / Timeline (Expanded 26 Milestones) */}
         <Journey />
 
-        {/* Section 5: Vision & Priorities (Full Bleed Gradient & 6 Tiles) */}
+        {/* Section 7: Vision & Priorities (Full Bleed Gradient & 6 Tiles) */}
         <Vision />
 
-        {/* Section 6: Horizontal Scroll Gallery (In the Field) */}
+        {/* Section 8: Horizontal Scroll Gallery (In the Field) */}
         <Gallery />
 
-        {/* Section 7: Lok Bhavan / Office (Ex-Officio Appointments) */}
+        {/* Section 9: Lok Bhavan / Office (3 Sub-blocks) */}
         <Office />
 
-        {/* Section 8: Footer / Contact (Devanagari SEVA Wordmark) */}
+        {/* Section 10: Footer / Contact (Devanagari SEVA Wordmark) */}
         <Footer />
       </main>
     </div>
